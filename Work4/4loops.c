@@ -2,51 +2,54 @@
 
 int main()
 {
-    int num,exp, power=1;
+    int num, exp, power, choice, sum;
 
 
     do
     {
-        printf("Enter choice \n 1.Power 2.Sumton 3.Exit :");
+        printf("Enter choice \n 1.Power\n 2.Sum to n\n 3.Exit\n Choice :");
         scanf("%d", &choice);
 
         if(choice ==1)
         {
+            power = 1;
             printf("Enter the base number: ");
-            scanf("%d",&num);
+            scanf("%d", &num);
 
             printf("Enter the exponent: ");
-            scanf("%d",&exp);
+            scanf("%d", &exp);
         
-            for(int i=0;i<=exp;i++)
-        {
-            if(i==0)
-                power= 1;
-            else{
-            power=power*num;
+            for(int i=0;i<exp;i++)
+            {
+                power = power * num;
             }
-            
+
+            printf("%d^%d = %d\n", num, exp, power);
+
         }
-        else if(choice ==2)
+        else if (choice == 2)
         {
-            printf("%d",power);
+            sum = 0;
+            printf("Enter a positive number: ");
+            scanf("%d", &num);
 
+            while (num > 0)
+            {
+                sum = sum + num;
+                num--;
+            }
 
-            printf("Enter the base number: ");
-            scanf("%d",&num);
-         int sum=0;
-
-            while(num>0)
+            printf("Sum = %d\n", sum);
+        }
+        else if(choice == 3)
         {
-            sum= sum+ num;
-            num--;
+            printf("Exiting program\n");
         }
-
-            printf("Sum =%d",sum);
-    }while(choice !=3);
+        else
+        {
+            printf("Invalid choice, try again.\n");
         }
-        
+    } while (choice != 3);
 
-        
-    
+    return 0;
 }
