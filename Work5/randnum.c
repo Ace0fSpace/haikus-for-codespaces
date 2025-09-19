@@ -4,7 +4,7 @@
 int main(void)
 
 {
-    int lower, upper
+    int lower, upper 
     srand(time(NULL));
     int randomValue = rand();
     printf("Generated random number: %d\n", randomValue);
