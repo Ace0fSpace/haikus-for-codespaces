@@ -2,7 +2,7 @@
 
 int main()
 {
-    int num, sum = 0, larg = -2147483648; 
+    int num, sum = 0, larg = -9999999; 
     int evenCount = 0, oddCount = 0;
 
     do
@@ -38,7 +38,7 @@ int main()
 
     printf("\nSum, count, largest number, count of even and odd numbers of everything entered:\n");
     printf("Sum of all number entered = %d\n", sum);
-    printf("The largest number entered = %d\n", (larg == -2147483648 ? 0 : larg));
+    printf("The largest number entered = %d\n", (larg == -9999999 ? 0 : larg));
     printf("The count of even numbers =%d\n", evenCount);
     printf("The count of odd numbers = %d\n", oddCount);
      
