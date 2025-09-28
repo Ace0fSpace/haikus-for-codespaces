@@ -118,7 +118,7 @@ int main()
 	}
 	printf("The factorial of this number is : %llu\n", fact);
 
-	printf("Enter a Number : \n");
+	printf("Enter a Number (max 65) : \n");
 	scanf("%d", &num4);
 
 	while (num4 > 0)
