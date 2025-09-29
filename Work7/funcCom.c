@@ -2,7 +2,7 @@
 
 int fun6(int n)
 {
-    printf("Value of n passed from main = %d",n);
+    printf("Value of n passed from main = %d\n",n);
     int result = n*2;
     return result;
 }
@@ -34,7 +34,7 @@ int fun1(int n)
 
 int main()
 {
-    int result= fun1(6);
-    printf("Result is :%d",result);
+    int result= fun1(20);
+    printf("Result is :%d\n",result);
 }
     
