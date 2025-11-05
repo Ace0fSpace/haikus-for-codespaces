@@ -1,19 +1,12 @@
 #include<stdio.h>
-
-void (name[100])
-{
-    printf("Enter a name:");
-    scanf("%s"*name);
-    fgets(name, sizeof(name), stdin);
-    printf("Entered name = %s", name);
-    return 0:
-
-}
+#include<string.h>
 
 int main()
 {
-    char a[10]={'b','a','l','l','s','\0'};
-
+    char a[100]={'b','a','l','l','s','\0'};
+    char b[100]=
+    char c[100];
+    
     printf("%s",a);
     
     return 0;
