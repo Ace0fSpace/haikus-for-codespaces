@@ -1,0 +1,32 @@
+// Caesar Cipher Encoder and Decoder in JavaScript
+
+function caesarCipher(text, shift, mode = 'encode') {
+  // Normalize shift to be between 0 and 25
+  shift = ((shift % 26) + 26) % 26;
+
+  // For decode, use negative shift
+  if (mode === 'decode') {
+    shift = -shift;
+  }
+
+  return text.split('').map(char => {
+    // Check if character is a letter
+    if (char.match(/[a-z]/i)) {
+      const code = char.charCodeAt(0);
+      // Determine if uppercase or lowercase
+      const base = code >= 65 && code <= 90 ? 65 : 97;
+      // Shift the character
+      return String.fromCharCode(((code - base + shift) % 26) + base);
+    }
+    // Non-letter characters remain unchanged
+    return char;
+  }).join('');
+}
+
+// Example usage
+const plaintext = "Hello, World!";
+const shift = 3;
+
+console.log("Original:", plaintext);
+console.log("Encoded:", caesarCipher(plaintext, shift, 'encode'));
+console.log("Decoded:", caesarCipher(caesarCipher(plaintext, shift, 'encode'), shift, 'decode'));
